@@ -13,7 +13,8 @@ public class Response {
 
     public static String getMetadata(){
         Response rsp = new Response();
-        rsp.students = null;
+        rsp.students.add( AppStartupRunner.response.students.get(0) );
+        rsp.students.add( AppStartupRunner.response.students.get(1) );
         rsp.metaData = AppStartupRunner.response.metaData;
         return Util.toJson(rsp);
     }
